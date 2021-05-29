@@ -8,12 +8,18 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
+import { HomeComponent } from './pageModules/home/home.component';
 
 export const routes: Routes = [
+  // {
+  //   path: 'pages',
+  //   loadChildren: () => import('./pages/pages.module')
+  //     .then(m => m.PagesModule),
+  // },
   {
-    path: 'pages',
-    loadChildren: () => import('./pages/pages.module')
-      .then(m => m.PagesModule),
+    path: '',
+    loadChildren: () => import('./pageModules/home/home.module')
+      .then(m => m.HomeModule),
   },
   {
     path: 'auth',
@@ -43,10 +49,15 @@ export const routes: Routes = [
         path: 'reset-password',
         component: NbResetPasswordComponent,
       },
+      {
+        path: 'auth-home',
+        component: HomeComponent
+      }
     ],
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
 
 const config: ExtraOptions = {
