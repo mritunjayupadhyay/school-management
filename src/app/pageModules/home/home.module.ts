@@ -10,7 +10,7 @@ import { HomeRoutingModule, routedComponents } from './home-routing.module';
   imports: [
     HomeRoutingModule,
     ThemeModule,
-    NbMenuModule
+    NbMenuModule,
   ],
 })
 export class HomeModule {}

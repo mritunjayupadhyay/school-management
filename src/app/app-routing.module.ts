@@ -51,11 +51,10 @@ export const routes: Routes = [
       },
       {
         path: 'auth-home',
-        component: HomeComponent
-      }
+        component: HomeComponent,
+      },
     ],
   },
-  
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];

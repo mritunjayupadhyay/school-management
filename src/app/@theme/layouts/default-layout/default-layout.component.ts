@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { NbMenuItem } from "@nebular/theme";
+import { Component } from '@angular/core';
+import { NbMenuItem } from '@nebular/theme';
 
 const MENU_ITEMS: NbMenuItem[] = [
   {
@@ -17,7 +17,7 @@ const MENU_ITEMS: NbMenuItem[] = [
 @Component({
   selector: 'school-management-default-layout',
   templateUrl: './default-layout.component.html',
-  styleUrls: ['./default-layout.component.scss']
+  styleUrls: ['./default-layout.component.scss'],
 })
 export class DefaultLayoutComponent {
   menu = MENU_ITEMS;

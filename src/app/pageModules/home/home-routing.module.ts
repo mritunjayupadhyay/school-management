@@ -10,9 +10,9 @@ const routes: Routes = [{
   children: [
     {
       path: 'welcome',
-      component: WelcomeComponent
-    }
-  ]
+      component: WelcomeComponent,
+    },
+  ],
 }];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
@@ -20,8 +20,7 @@ const routes: Routes = [{
 })
 export class HomeRoutingModule { }
 
-
 export const routedComponents = [
   WelcomeComponent,
-  HomeComponent
+  HomeComponent,
 ];
