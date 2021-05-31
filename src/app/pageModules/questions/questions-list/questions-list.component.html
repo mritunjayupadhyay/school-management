@@ -1,0 +1,9 @@
+<h1 *ngIf="questionList.length === 0; else showList">There is no question added</h1>
+
+<ng-template #showList>
+  <h1>Questions list: {{ questionList.length }}</h1>
+  <school-manangement-question-list-item 
+    *ngFor="let questionItem of questionList"
+    [questionItem]="questionItem"
+  ></school-manangement-question-list-item>
+</ng-template>

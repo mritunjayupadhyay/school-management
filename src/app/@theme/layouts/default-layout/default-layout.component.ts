@@ -11,7 +11,7 @@ const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Question',
     icon: 'question-mark-circle-outline',
-    link: '/question',
+    link: '/questions',
   }];
 
 @Component({

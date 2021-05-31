@@ -1,0 +1,17 @@
+.badge {
+  position: static;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+p, .h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.subtitle-2 {
+  margin: 5px 10px;
+}
+ p {
+   margin-bottom: 0;
+ }

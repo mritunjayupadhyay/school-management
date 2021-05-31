@@ -1,0 +1,36 @@
+<nb-reveal-card size="tiny" class="solar-card">
+  <nb-card-front>
+    <nb-card>
+      <nb-card-header>
+       
+        <nb-badge text="{{ questionItem.subject }}" status="warning" class="badge"></nb-badge>
+        <nb-badge text="Level: {{ questionItem.level }}" status="danger" class="badge"></nb-badge>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="info">
+          <div class="h4 value">{{questionItem.title}}</div>
+          <div class="details subtitle-2">
+            <nb-badge text="{{ questionItem.institution }}" status="basic" class="badge"></nb-badge>
+            <nb-badge text="{{ questionItem.division }}" status="primary" class="badge"></nb-badge>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card>
+      <nb-card-body>
+        <nb-radio-group>
+          <nb-radio *ngFor="let option of questionItem.options"
+            [checked]="option.correct"
+            [value]="option.id"
+          >
+            <p>
+              {{ option.text }}
+            </p>
+          </nb-radio>
+        </nb-radio-group>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-back>
+</nb-reveal-card>

@@ -22,6 +22,11 @@ export const routes: Routes = [
       .then(m => m.HomeModule),
   },
   {
+    path: 'questions',
+    loadChildren: () => import('./pageModules/questions/questions.module')
+      .then(m => m.QuestionsModule),
+  },
+  {
     path: 'auth',
     component: NbAuthComponent,
     children: [

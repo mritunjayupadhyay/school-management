@@ -17,12 +17,7 @@ const MENU_ITEMS: NbMenuItem[] = [
 @Component({
   selector: 'school-management-home',
   styleUrls: ['home.component.scss'],
-  template: `
-    <school-management-default-layout>
-    <h1>kflsdjfi</h1>
-      <router-outlet></router-outlet>
-    </school-management-default-layout>
-  `,
+  templateUrl: './home.component.html',
 })
 export class HomeComponent {
   menu = MENU_ITEMS;
