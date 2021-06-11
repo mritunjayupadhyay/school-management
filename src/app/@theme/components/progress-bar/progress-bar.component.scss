@@ -1,0 +1,17 @@
+.progress-bar-container {
+  height: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  min-width: 240px;
+  background-color: #EBEDF3;
+  border-radius: 00.42rem;
+  position: relative;
+  .progress-bar {
+    background-color: #3366ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0.42rem;
+  }
+}

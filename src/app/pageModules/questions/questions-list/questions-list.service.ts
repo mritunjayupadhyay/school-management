@@ -5,7 +5,7 @@ export class QuestionListService {
   questions = [
     {
       question_id: 1,
-      title: 'Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty?',
+      title: 'Who is greatest king of Gupta Dynesty. Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta Dynesty?',
       subject: 'History',
       level: 1,
       division: '9',
@@ -13,7 +13,7 @@ export class QuestionListService {
       options: [
         {
           option_id: 1,
-          text: 'Vikramaditya.Who is greatest king of Gupta Dynesty.Who is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta Dynesty',
+          text: 'Vikramaditya.Who is greatest king of Gupta Dynesty. Who is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta Dynesty',
           correct: true
         },
         {
@@ -57,8 +57,8 @@ export class QuestionListService {
           correct: false
         },
         {
-          option_id: 1,
-          text: 'Ashok',
+          option_id: 4,
+          text: 'Ashok. Vikramaditya.Who is greatest king of Gupta Dynesty. Who is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta Dynesty',
           correct: false
         },
       ]

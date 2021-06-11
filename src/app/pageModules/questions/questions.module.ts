@@ -1,11 +1,17 @@
 import { NgModule } from "@angular/core";
-import { NbBadgeModule, NbCardModule, NbRadioModule } from "@nebular/theme";
+import { NbEvaIconsModule } from "@nebular/eva-icons";
+import { NbBadgeModule, NbButtonModule, NbCardModule, NbContextMenuModule, NbIconModule, NbProgressBarModule, NbRadioModule } from "@nebular/theme";
+import { ProgressBarComponent } from "../../@theme/components/progress-bar/progress-bar.component";
+import { DropDownDirective } from "../../@theme/directives/dropdown.directive";
 import { ThemeModule } from "../../@theme/theme.module";
+import { QuestionService } from "./question.service";
 import { routedComponents, QuestionsRoutingModule } from "./questions.routing.module";
 
 @NgModule({
   declarations: [
     ...routedComponents,
+    ProgressBarComponent,
+    DropDownDirective,
   ],
   imports: [
     QuestionsRoutingModule,
@@ -13,6 +19,11 @@ import { routedComponents, QuestionsRoutingModule } from "./questions.routing.mo
     NbCardModule,
     NbBadgeModule,
     NbRadioModule,
+    NbButtonModule,
+    NbIconModule,
+    NbEvaIconsModule,
+    NbContextMenuModule,
   ],
+  providers: [QuestionService]
 })
 export class QuestionsModule {}

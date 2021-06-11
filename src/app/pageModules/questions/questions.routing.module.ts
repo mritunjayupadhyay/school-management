@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { QuestionItemComponent } from './question-item/question-item.component';
 import { QuestionListItem } from './question-list-item/question-list-item.component';
 import { QuestionsListComponent } from './questions-list/questions-list.component';
 import { QuestionsComponent } from './questions.component';
@@ -10,9 +11,17 @@ const routes: Routes = [{
   component: QuestionsComponent,
   children: [
     {
+      path: ':id',
+      component: QuestionItemComponent
+    },
+    {
+      path: 'list',
+      component: QuestionsListComponent
+    },
+    {
       path: '',
       component: QuestionsListComponent
-    }
+    },
   ]
 }];
 @NgModule({
@@ -25,4 +34,5 @@ export const routedComponents = [
   QuestionsComponent,
   QuestionsListComponent,
   QuestionListItem,
+  QuestionItemComponent,
 ];

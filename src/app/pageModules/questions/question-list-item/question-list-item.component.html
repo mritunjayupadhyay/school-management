@@ -1,21 +1,51 @@
-<nb-reveal-card size="tiny" class="solar-card">
+<nb-reveal-card size="tiny">
   <nb-card-front>
-    <nb-card>
-      <nb-card-header>
-       
-        <nb-badge text="{{ questionItem.subject }}" status="warning" class="badge"></nb-badge>
-        <nb-badge text="Level: {{ questionItem.level }}" status="danger" class="badge"></nb-badge>
-      </nb-card-header>
-      <nb-card-body>
-        <div class="info">
-          <div class="h4 value">{{questionItem.title}}</div>
-          <div class="details subtitle-2">
-            <nb-badge text="{{ questionItem.institution }}" status="basic" class="badge"></nb-badge>
-            <nb-badge text="{{ questionItem.division }}" status="primary" class="badge"></nb-badge>
+    
+      <nb-card>
+        <nb-card-header>
+          <a [routerLink]="[questionItem.question_id]">
+         <div class="card-header-container">
+           <div>
+            <nb-badge text="{{ questionItem.subject }}" status="warning" class="badge"></nb-badge>
+            <nb-badge text="Level: {{ questionItem.level }}" status="danger" class="badge"></nb-badge>
+           </div>
+           <div>
+             <div class="buttonContainer">
+              <button nbButton shape="rectangle" size="small" status="info" (click)="edit($event)">EDIT</button>
+              <button nbButton shape="rectangle" size="small" status="danger" (click)="delete($event)">DELETE</button>
+             </div>
+             <div class="buttonContextMenuContainer" school-management-dropdown-directive>
+              <!-- <a nbButton shape="rectangle" size="small" status="info" routerLink="/questions/2">DETAILS</a> -->
+              <div class="transparentButton">
+                <nb-icon icon="more-vertical-outline"></nb-icon>
+              </div>
+              <div class="positionedDiv">
+                <div class="div-card-view">
+                  <div class="item">
+                    <button (click)="edit($event)">EDIT</button>
+                  </div>
+                  <div class="item">
+                    <button (click)="delete($event)">DELETE</button>
+                  </div>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+         </a>
+        </nb-card-header>
+        <nb-card-body>
+          <a [routerLink]="[questionItem.question_id]">
+          <div class="info">
+            <h4 class="value">{{questionItem.title}}</h4>
+            <div class="details subtitle-2">
+              <nb-badge text="{{ questionItem.institution }}" status="basic" class="badge"></nb-badge>
+              <nb-badge text="{{ questionItem.division }}" status="primary" class="badge" ></nb-badge>
+            </div>
           </div>
-        </div>
-      </nb-card-body>
-    </nb-card>
+          </a>
+        </nb-card-body>
+      </nb-card>
   </nb-card-front>
   <nb-card-back>
     <nb-card>
@@ -24,6 +54,7 @@
           <nb-radio *ngFor="let option of questionItem.options"
             [checked]="option.correct"
             [value]="option.id"
+            class="option-radio-button"
           >
             <p>
               {{ option.text }}
