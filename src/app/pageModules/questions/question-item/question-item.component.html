@@ -34,28 +34,28 @@
     <nb-card-footer>
       <div class="icon-text-container">
         <div class="iconText multiple-text-line">
-          <nb-icon class="big" icon="person"></nb-icon>
+          <nb-icon class="big" icon="book-open"></nb-icon>
           <div>
             <span class="icon-text-heading">Subject</span>
             <span>History</span>
           </div>
         </div>
         <div class="iconText multiple-text-line">
-          <nb-icon class="big" icon="person"></nb-icon>
+          <nb-icon class="big" icon="star"></nb-icon>
           <div>
             <span class="icon-text-heading">Standard</span>
             <span>9</span>
           </div>
         </div>
         <div class="iconText multiple-text-line">
-          <nb-icon class="big" icon="person"></nb-icon>
+          <nb-icon class="big" icon="options-2"></nb-icon>
           <div>
             <span class="icon-text-heading">Options</span>
             <span>4</span>
           </div>
         </div>
         <div class="iconText multiple-text-line">
-          <nb-icon class="big" icon="person"></nb-icon>
+          <nb-icon class="big" icon="checkmark"></nb-icon>
           <div>
             <span class="icon-text-heading">Correct Answer</span>
             <span>2</span>
@@ -63,5 +63,29 @@
         </div>
       </div>
     </nb-card-footer>
+  </nb-card>
+</div>
+
+<div class="options-container">
+  <nb-card>
+    <nb-card-body>
+      <div 
+        *ngFor="let option of options"
+        class="each-option"
+      >
+      <nb-checkbox [checked]="option.correct" status="danger" disabled></nb-checkbox>
+          <p class="answer-text">
+            {{ option.text }}
+          </p>
+          <div class="button-container">
+            <div class="transparentButton">
+              <nb-icon icon="edit" status="warning" class="big"></nb-icon>
+            </div>
+            <div class="transparentButton">
+              <nb-icon icon="close" status="danger" class="big"></nb-icon>
+            </div>
+          </div>
+      </div>
+    </nb-card-body>
   </nb-card>
 </div>

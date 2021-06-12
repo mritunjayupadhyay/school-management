@@ -23,13 +23,20 @@
     display: flex;
     flex-wrap: wrap;
     .date-container, .level-container {
-      margin-right: 30px;
+      margin-bottom: 1rem;
+        @include media-breakpoint-up(sm) {
+          margin-bottom: 0;
+        }
       .date-text, .level-text {
         color: #B5B5C3;
         font-family: Open Sans,sans-serif;
         font-size: .9rem;
         font-weight: 600;
         line-height: .9rem;
+        margin-bottom: 0.4rem;
+        @include media-breakpoint-up(sm) {
+          margin-bottom: 0.6rem;
+        }
       }
       .label-bar {
         padding-top: 0.45rem;
@@ -49,6 +56,12 @@
         border-color: transparent;
         font-weight: 600;
         text-align: center;
+      }
+    }
+    .date-container {
+      margin-right: 0.2rem;
+      @include media-breakpoint-up(sm) {
+        margin-right: 2rem;
       }
     }
   }
@@ -71,10 +84,35 @@
       div {
         display: flex;
         flex-direction: column;
+        padding-left: 0.3rem;
         .icon-text-heading {
           font-size: 0.6rem;
         }
       }
+    }
+  }
+
+  .options-container {
+    .each-option {
+      display: grid;
+      grid-template-columns: 40px 1fr 80px;
+      .answer-text {
+        color: #222b45;
+        font-family: Open Sans,sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+      }
+      .button-container {
+        display: flex;
+      }
+    }
+    .transparentButton {
+      background-color: transparent;
+      border: none;
+      padding: 5px 10px;
+      outline: none;
+      z-index: 1000;
     }
   }
 }

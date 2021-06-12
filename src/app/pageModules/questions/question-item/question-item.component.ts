@@ -9,6 +9,28 @@ import { ActivatedRoute, Params } from "@angular/router";
 export class QuestionItemComponent implements OnInit {
   question_id: string;
   todayDate : Date = new Date();
+  options = [
+    {
+      option_id: 1,
+      text: 'When you leave an empty space between the track values, the grid lines are automatically assigned positive and negative numbers: When you leave an empty space between the track values, the grid lines are automatically assigned positive and negative numbers:',
+      correct: false
+    },
+    {
+      option_id: 2,
+      text: 'Akbar',
+      correct: true
+    },
+    {
+      option_id: 3,
+      text: 'Chandra Gupta',
+      correct: true
+    },
+    {
+      option_id: 4,
+      text: 'Ashok',
+      correct: false
+    },
+  ];
   constructor(private route: ActivatedRoute) {}
   ngOnInit() {
     this.question_id = this.route.snapshot.params['id'];
