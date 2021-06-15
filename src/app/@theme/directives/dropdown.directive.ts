@@ -1,7 +1,7 @@
-import { Directive, ElementRef, HostBinding, HostListener } from "@angular/core";
+import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[school-management-dropdown-directive]'
+  selector: '[school-management-dropdown-directive]',
 })
 export class DropDownDirective {
   @HostBinding('class.open') isOpen = false;
@@ -19,4 +19,4 @@ export class DropDownDirective {
       this.isOpen = false;
     }
   } 
-}
+} 

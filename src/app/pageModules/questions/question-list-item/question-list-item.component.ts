@@ -1,15 +1,15 @@
-import { Component, Input, OnDestroy, OnInit } from "@angular/core";
-import { NbMediaBreakpointsService, NbThemeService } from "@nebular/theme";
-import { Subject } from "rxjs";
-import { map, takeUntil } from "rxjs/operators";
-import { QuestionService } from "../question.service";
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { NbMediaBreakpointsService, NbThemeService } from '@nebular/theme';
+import { Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
+import { QuestionService } from '../question.service';
 
 @Component({
   selector: 'school-manangement-question-list-item',
   templateUrl: './question-list-item.component.html',
-  styleUrls: ['./question-list-item.component.scss']
+  styleUrls: ['./question-list-item.component.scss'],
 })
-export class QuestionListItem implements OnInit, OnDestroy {
+export class QuestionListItemComponent implements OnInit, OnDestroy {
   @Input() questionItem;
   private destroy$: Subject<void> = new Subject<void>();
   showLess: boolean = false;
@@ -31,9 +31,6 @@ export class QuestionListItem implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe((isLessThanXl: boolean) => this.showLess = isLessThanXl);
-
-      console.log("question item", this.breakpointService.getBreakpointsMap());
-
   }
 
   details() {

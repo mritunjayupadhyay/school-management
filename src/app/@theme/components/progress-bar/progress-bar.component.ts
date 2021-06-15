@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'school-management-progress-bar',
-  templateUrl: "./progress-bar.component.html",
-  styleUrls: ['./progress-bar.component.scss']
+  templateUrl: './progress-bar.component.html',
+  styleUrls: ['./progress-bar.component.scss'],
 })
 export class ProgressBarComponent {
   @Input() maxPoint: number = 5;
