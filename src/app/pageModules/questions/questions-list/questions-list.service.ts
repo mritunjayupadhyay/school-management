@@ -31,7 +31,7 @@ export class QuestionListService {
           text: 'Ashok',
           correct: false,
         },
-      ]
+      ],
     },
     {
       question_id: 2,
@@ -61,9 +61,9 @@ export class QuestionListService {
           text: 'Ashok. Vikramaditya.Who is greatest king of Gupta Dynesty. Who is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta DynestyWho is greatest king of Gupta Dynesty',
           correct: false,
         },
-      ]
-    }
-  ]
+      ],
+    },
+  ];
 
   getQuestion() {
     return [...this.questions];

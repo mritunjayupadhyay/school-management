@@ -37,7 +37,7 @@ export class QuestionItemComponent implements OnInit {
     this.route.params.subscribe(
       (params: Params) => {
         this.question_id = params['id'];
-      }
+      },
     );
   }
 }

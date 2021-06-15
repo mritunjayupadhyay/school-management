@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { 
+import {
   NbBadgeModule,
   NbButtonModule,
   NbCardModule,
-  NbCheckboxModule, 
-  NbContextMenuModule, 
-  NbIconModule, 
+  NbCheckboxModule,
+  NbContextMenuModule,
+  NbIconModule,
   NbRadioModule } from '@nebular/theme';
 import { ProgressBarComponent } from '../../@theme/components/progress-bar/progress-bar.component';
 import { DropDownDirective } from '../../@theme/directives/dropdown.directive';
@@ -32,6 +32,6 @@ import { routedComponents, QuestionsRoutingModule } from './questions.routing.mo
     NbContextMenuModule,
     NbCheckboxModule,
   ],
-  providers: [QuestionService]
+  providers: [QuestionService],
 })
 export class QuestionsModule {}

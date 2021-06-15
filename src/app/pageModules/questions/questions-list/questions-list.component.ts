@@ -1,5 +1,5 @@
 import { QuestionListService } from './questions-list.service';
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'school-management-questions-list',

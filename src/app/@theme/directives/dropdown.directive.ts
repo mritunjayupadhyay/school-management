@@ -18,5 +18,5 @@ export class DropDownDirective {
     } else {
       this.isOpen = false;
     }
-  } 
-} 
+  }
+}

@@ -17,27 +17,27 @@ export class QuestionService {
         {
           option_id: 1,
           text: 'Vikramaditya',
-          correct: true
+          correct: true,
         },
         {
           option_id: 2,
           text: 'Samudra Gupta',
-          correct: false
+          correct: false,
         },
         {
           option_id: 3,
           text: 'Chandra Gupta',
-          correct: false
+          correct: false,
         },
         {
           option_id: 1,
           text: 'Ashok',
-          correct: false
+          correct: false,
         },
       ],
       status: {
         valid: true,
-        reason: ''
+        reason: '',
       }
     },
     {
@@ -54,40 +54,38 @@ export class QuestionService {
         {
           option_id: 1,
           text: 'Vikramaditya',
-          correct: false
+          correct: false,
         },
         {
           option_id: 2,
           text: 'Akbar',
-          correct: true
+          correct: true,
         },
         {
           option_id: 3,
           text: 'Chandra Gupta',
-          correct: true
+          correct: true,
         },
         {
           option_id: 1,
           text: 'Ashok',
-          correct: false
+          correct: false,
         },
       ],
       status: {
         valid: false,
-        reason: 'This question have more than one correct answer'
+        reason: 'This question have more than one correct answer',
       }
     }
-  ]
+  ];
 
   getQuestion() {
     return [...this.questions];
   }
 
   editQuestion(id: string) {
-    console.log("edit question", id);
   }
 
   deleteQuestion(id: string) {
-    console.log("delete question", id);
   }
 }
