@@ -22,7 +22,7 @@ const routes: Routes = [{
       path: '',
       component: QuestionsListComponent,
     },
-  ]
+  ],
 }];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

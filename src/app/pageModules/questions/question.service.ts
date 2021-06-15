@@ -38,7 +38,7 @@ export class QuestionService {
       status: {
         valid: true,
         reason: '',
-      }
+      },
     },
     {
       question_id: 2,
@@ -75,8 +75,8 @@ export class QuestionService {
       status: {
         valid: false,
         reason: 'This question have more than one correct answer',
-      }
-    }
+      },
+    },
   ];
 
   getQuestion() {
