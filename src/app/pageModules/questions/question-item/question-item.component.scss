@@ -3,7 +3,7 @@
 
 @include nb-install-component() {
   nb-icon.small {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   nb-icon.big {
     font-size: 1.6rem;
@@ -14,7 +14,7 @@
   }
   .question {
     color: #222b45;
-    font-family: Open Sans,sans-serif;
+    font-family: Open Sans, sans-serif;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5rem;
@@ -28,11 +28,11 @@
           margin-bottom: 0;
         }
       .date-text, .level-text {
-        color: #B5B5C3;
+        color: #b5b5c3;
         font-family: Open Sans,sans-serif;
-        font-size: .9rem;
+        font-size: 0.9rem;
         font-weight: 600;
-        line-height: .9rem;
+        line-height: 0.9rem;
         margin-bottom: 0.4rem;
         @include media-breakpoint-up(sm) {
           margin-bottom: 0.6rem;
@@ -51,8 +51,8 @@
         text-transform: uppercase !important;
         outline: none !important;
         vertical-align: middle;
-        color: #3699FF;
-        background-color: #E1F0FF;
+        color: #3699ff;
+        background-color: #e1f0ff;
         border-color: transparent;
         font-weight: 600;
         text-align: center;
@@ -69,11 +69,11 @@
     display: flex;
     flex-wrap: wrap;
     .iconText {
-      color: #B5B5C3;
-      font-family: Open Sans,sans-serif;
-      font-size: .9rem;
+      color: #b5b5c3;
+      font-family: Open Sans, sans-serif;
+      font-size: 0.9rem;
       font-weight: 600;
-      line-height: .9rem;
+      line-height: 0.9rem;
       margin-right: 1.5rem;
       margin-bottom: 0.6rem;
     }
@@ -95,10 +95,10 @@
   .options-container {
     .each-option {
       display: grid;
-      grid-template-columns: 40px 1fr 80px;
+      grid-template-columns: 40px auto 80px;
       .answer-text {
         color: #222b45;
-        font-family: Open Sans,sans-serif;
+        font-family: Open Sans, sans-serif;
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.5rem;
